@@ -9,3 +9,6 @@ sudo k3s kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard
 
 # Deploy admin-user
 sudo k3s kubectl apply -f resources/dashboard.admin-user.yml -f resources/dashboard.admin-user-role.yml
+
+# Create the external token (for dashboard login, needed for K8S 1.24+)
+sudo k3s kubectl apply -f resources/dashboard.admin-user.secret.yml

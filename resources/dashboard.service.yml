@@ -3,13 +3,12 @@ apiVersion: v1
 kind: Service
 metadata:
   name: kubernetes-dashboard
+  namespace: kubernetes-dashboard
   labels:
-    app.kubernetes.io/name: kubernetes-dashboard
-    app.kubernetes.io/component: backend
+    k8s-app: kubernetes-dashboard
 spec:
   ports:
-    - port: 8001
-      targetPort: 8001
+    - port: 8443
+      targetPort: 8443
   selector:
-    app.kubernetes.io/name: kubernetes-dashboard
-    app.kubernetes.io/component: backend
+    k8s-app: kubernetes-dashboard
