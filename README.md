@@ -4,7 +4,8 @@ see: https://rancher.com/docs/k3s/latest/en/installation/kube-dashboard/
 
 ## TODO
 
-This should run automatically as part of our Vagrant K3S provisioning.
+1. This should run automatically as part of our Vagrant K3S provisioning.
+2. The service setup should be via a ClusterIP or similar (or even an ingress, but that is probably overkill) so that the dashboard website is proxied to the Guest operating system so that it is possible to connect to the dashboard from the Host OS on port 8448 (or whatever port TBD).
 
 ## Instructions
 
