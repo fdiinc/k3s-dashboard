@@ -18,7 +18,7 @@ see: https://rancher.com/docs/k3s/latest/en/installation/kube-dashboard/
 ### Obtain a login token to use in next step
 
 ```sh
-sudo k3s kubectl -n kubernetes-dashboard describe secret admin-user-token | grep '^token'
+sudo k3s kubectl -n kubernetes-dashboard describe secret admin-user | grep '^token'
 ```
 
 ### Access the Dashboard 
