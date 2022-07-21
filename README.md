@@ -9,19 +9,20 @@ see: https://rancher.com/docs/k3s/latest/en/installation/kube-dashboard/
 
 ## Instructions
 
-### Obtain a login token to use in next step
-
-```sh
-sudo k3s kubectl -n kubernetes-dashboard describe secret admin-user-token | grep '^token'
-```
-
 ### Deploy the Dashboard
 
 ```sh
 01-deploy-dashboard.sh
 ```
 
+### Obtain a login token to use in next step
+
+```sh
+sudo k3s kubectl -n kubernetes-dashboard describe secret admin-user-token | grep '^token'
+```
+
 ### Access the Dashboard 
+
 
 #### via access service
 
@@ -36,7 +37,7 @@ Get the IP address
 kubectl get service -n kubernetes-dashboard kubernetes-dashboard
 ```
 
-### Or use the Proxy
+#### Or use the Proxy
 
 ```
 sudo k3s kubectl proxy
